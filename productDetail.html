@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link href="style/base.css" rel="stylesheet" type="text/css"/>
+<link href="style/1/project.css" rel="stylesheet" type="text/css"/>
+<body>
+
+    <div class="container mt20">
+        <div class="sd_a right">
+            <form action="#" id="cartKey" method="post" onsubmit="return proDetail.buynow();">
+                <input type="hidden" id="json" name="json" />
+                <input type="hidden" name="productId" value="18796" id="productId">
+                <div class="f18">
+                    <a href="http://yw.work.hezon.cn/product/edit/17722.html" class="c36c f12 mr5 ml5 mt5 right">编辑</a>
+                    马来西亚进口RINDA联达硬喜糖果草莓榴莲柠檬味特产零食品60g
+                </div>
+                <table class="table_form sd_a_a mt10">
+                    <tr class="sd_a_a_a">
+                        <th>价格</th>
+                        <td colspan="2" class="cred vbottom" id="priceRange">
+
+                        </td>
+                    </tr>
+                    <!--如果按数量报价 -->
+                    <tr class="sd_a_a_a">
+                        <th>
+                            供货数量
+                        </th>
+                        <td colspan=2>
+                            <ul class="sd_a_a_a_a">
+                                <li>
+                                    <span id="salenumber">99999</span> 对
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <!--如果按阶梯报价
+                    <tr class="sd_a_a_a">
+                        <th>
+                            起订量
+                        </th>
+                        <td colspan=2>
+                            <ul class="sd_a_a_a_a">
+                                <li>
+                                    <span>3</span> 双
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <th>
+                            配送至
+                        </th>
+                        <td class="relative">
+                            <!--
+								<c:if test="${1 == productDetail.product.freightTemplateId }">
+									<span class="cccc mr5 ml5">|</span>
+									<span>包邮</span>
+								</c:if>
+                                <!-- 买家到付
+                                <c:if test="${2 == productDetail.product.freightTemplateId }">
+
+									<span class="cccc mr5 ml5">|</span>
+									<span>买家到付</span>
+								</c:if>
+                                    -->
+                            <a href="javascript:void(0)" onclick="proDetail.showAreas(event);" class="sd_a_a_b">
+                                <span id="proArea">浙江</span><i></i>
+                            </a>
+                            <span class="cccc mr5 ml5">|</span>
+                            <span>快递￥</span>
+                            <span class="cred" id="freightval">5.00</span>
+                            <ul class="sd_a_a_g hide" id="areaList">
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,110000)">北京</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,120000)">天津</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,130000)">河北</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,140000)">山西</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,150000)">内蒙古</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,210000)">辽宁</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,220000)">吉林</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,230000)">黑龙江</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,310000)">上海</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,320000)">江苏</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,330000)">浙江</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,340000)">安徽</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,350000)">福建</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,360000)">江西</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,370000)">山东</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,410000)">河南</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,420000)">湖北</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,430000)">湖南</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,440000)">广东</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,450000)">广西</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,460000)">海南</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,510000)">四川</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,520000)">贵州</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,530000)">云南</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,540000)">西藏</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,610000)">山西</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,620000)">甘肃</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,630000)">青海</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,640000)">宁夏</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,650000)">新疆</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,710000)">台湾</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,810000)">香港</a></li>
+                                <li><a href="javascript:void(0)" onclick="proDetail.preArea(this,820000)">澳门</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tbody id="addBySpec">
+
+                    </tbody>
+                    <tr class="sd_a_a_i">
+                        <td colspan=3 id="bill">
+
+                        </td>
+                    </tr>
+                    <tr class="sd_a_a_e">
+                        <th>&nbsp;</th>
+                        <td colspan=2>
+                            <div class="vmiddle">
+								<span class="cred mr10">
+								   <span class="mr5"id="totalNum">0</span>双</span>
+                                <span class="mg05 cccc">|</span>
+                                <span class="cred ml10">
+                                    <span class="mr5" id="totalPrice">0.00</span>元（不含运费）
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="sd_a_a_f">
+                        <th>&nbsp;</th>
+                        <td colspan=2 class="tr">
+                            <input type="button" class="bt bt-l" onclick="proDetail.addCart()" value="加入购物车" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="sd_b">
+            <div class="tableCell sd_b_a">
+                <div class="lowIEMiddle">
+                    <img id="lagerPic"
+                         src="http://img1.yiwugou.com/i004/2018/03/20/58/1bf0b586ba46d18cac77d3990b221a15.jpg@400w_400h"
+                         onerror="this.src='http://yiwugouimg.oss-cn-hangzhou.aliyuncs.com/cloud/images/noimg2.png'" />
+                </div>
+            </div>
+            <ul class="sd_b_b mt20" id="pics">
+                <li>
+                    <a href="javascript:void(0);" class="block">
+                        <div class="tableCell">
+                            <div class="lowIEMiddle">
+                                <img src="http://img1.yiwugou.com/i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg@60w_60h"
+                                     data-source="http://img1.yiwugou.com/i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg@400w_400h"
+                                     onerror="this.src='http://yiwugouimg.oss-cn-hangzhou.aliyuncs.com/cloud/images/noimg2.png'" />
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="block">
+                        <div class="tableCell">
+                            <div class="lowIEMiddle">
+                                <img src="http://img1.yiwugou.com/i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg@60w_60h"
+                                     data-source="http://img1.yiwugou.com/i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg@400w_400h"
+                                     onerror="this.src='http://yiwugouimg.oss-cn-hangzhou.aliyuncs.com/cloud/images/noimg2.png'" />
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="block">
+                        <div class="tableCell">
+                            <div class="lowIEMiddle">
+                                <img src="http://img1.yiwugou.com/i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg@60w_60h"
+                                     data-source="http://img1.yiwugou.com/i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg@400w_400h"
+                                     onerror="this.src='http://yiwugouimg.oss-cn-hangzhou.aliyuncs.com/cloud/images/noimg2.png'" />
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clr"></div>
+        <div class="sd_c mt20">
+            <ul class="sd_c_a" id="tab">
+                <li class="active">商品详情</li>
+            </ul>
+            <div class="content mt10">
+                <!-- 详情 -->
+                <span style="color:#666666;font-family:Simsun;font-size:14px;line-height:28px;">复古的波西米亚风长款</span><a class="channel_keylink" href="http://www.2liang.net/fushi/erhuan">耳环</a><span style="color:#666666;font-family:Simsun;font-size:14px;line-height:28px;">，一种古典而清新的感觉，现代</span><a class="channel_keylink" href="http://www.2liang.net/fushi/" target="_blank">时尚</a><span style="color:#666666;font-family:Simsun;font-size:14px;line-height:28px;">中带点紫调气息，流苏垂落下来，由内而外的优雅。
+                <div class="pro_info_detail" style="margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;">
+                    <div class="pro_info_text" style="margin:6px 0px 0px;padding:0px;border:0px;font-size:14px;">
+                        产品为现代家居创意长臂壁灯，光源为环保的LED灯。适用于室内空间、商厦场所、酒店餐厅以及休闲娱乐场所等等。由灯罩和灯臂和灯头组成。灯罩是为仿古亚黑，灯臂为金古色。灯具制作工艺为喷漆磨砂，材质是为五金。灯头采用国际E27标准灯头，精巧时尚，选择光源更加便捷。该灯有优质加厚烤漆吸盘，表面光滑平整，厚薄均匀，手感舒适且安全又耐用。同时灯臂还可以180度上下调节，可按照空间来调整灯具角度，弯处采用圆滑角边设计，既安全又美观。产品的净重量为3.0KG，毛重3.0KG，体积为25.0cm*25.0cm*25.0cm；包装为硬纸箱加珍珠棉，包装使用高强度瓦楞纸，抗压使产品得到最大保护。产品发源地为广东中山。 &nbsp;公司简介：中山市古镇微盛照明厂，地处经济发达的珠三角洲，位于美丽的中国灯都——中山市古镇，是一家集成品设计研发、生产销售及服务于一体专业“家居照明，商业照明，工程照明”灯饰、灯具经营厂。 本厂拥有一批高素质的营销管理团队及专业的技术设计人才。自成立以来，秉承“诚信经营，合作双赢，共同发展”的经营理念，坚持专注品质 点亮生活的“人文核心”，树立求真务实，与时俱进的企业文化，予写着我国灯饰行业的传奇之路！86 0760&nbsp;13158945828（服务电话）
+                    </div>
+                    <div>
+                        <br>
+                    </div>
+                </div>
+                <div class="clr" style="margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;">
+                </div>
+                <div class="clr" style="margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;">
+                </div>
+                <div class="clr" style="margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;">
+                </div>
+                <div class="mt30px" style="margin:30px 0px 0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;">
+                    <ul class="view_pro_liul" style="background:url(&quot;">
+                    </ul>
+                </div>
+                </span><br>
+                <img src="http://img1.yiwugou.com/i004/2018/03/19/22/807c20948ddd4b1be6ba6820ca48b219.jpg" data-url="http://img1.yiwugou.com/i004/2018/03/19/22/807c20948ddd4b1be6ba6820ca48b219.jpg" style="max-width: 710px;">
+                <!-- 详情 -->
+            </div>
+        </div>
+    </div>
+
+</body>
+<!-- 此处公用 start-->
+<script src="http://yiwugouimg.oss-cn-hangzhou.aliyuncs.com/cloud/js/seatest/sea.js"></script>
+<script src="js/workpath.js"></script>
+<script>
+    seajs.setProjectConfig("http://img1.yiwugou.com/cloud/js/seatest",location.protocol+"//"+location.host+"/shopweb");
+</script>
+<!-- 此处公用 end-->
+<script>
+    seajs.use(["proDetail","utils","formValid","jqueryPlus","common"],function(ProDetail,Utils,FormValid,$){
+        window.proDetail = ProDetail;
+        proDetail.sellId = "04888882";
+        //proDetail.proSpec = [ {"minBatch":1,"specDetails":[{"specDetails":[{"specInfo":{"sqSupply":"1000"},"specName":"The color of camel s hair"},{"specInfo":{"sqSupply":"1000"},"specName":"red"},{"specInfo":{"sqSupply":"1000"},"specName":"brown"}],"specName":"40 * 60"},{"specDetails":[{"specInfo":{"sqSupply":"1000"},"specName":"The color of camel s hair"},{"specInfo":{"sqSupply":"1000"},"specName":"red"},{"specInfo":{"sqSupply":"1000"},"specName":"brown"}],"specName":"50 * 80"},{"specDetails":[{"specInfo":{"sqSupply":"1000"},"specName":"The color of camel s hair"},{"specInfo":{"sqSupply":"1000"},"specName":"red"},{"specInfo":{"sqSupply":"1000"},"specName":"brown"}],"specName":"60 * 90"},{"specDetails":[{"specInfo":{"sqSupply":"1000"},"specName":"The color of camel s hair"},{"specInfo":{"sqSupply":"1000"},"specName":"red"},{"specInfo":{"sqSupply":"1000"},"specName":"brown"}],"specName":"80 * 120"}],"specs":[{"specName":"size","specValues":[{"checked":true,"value":"40 * 60"},{"checked":true,"value":"50 * 80"},{"checked":true,"value":"60 * 90"},{"checked":true,"value":"80 * 120"}]},{"specName":"color","specValues":[{"checked":true,"value":"The color of camel s hair"},{"checked":true,"value":"red"},{"checked":true,"value":"brown"}]}],"stepPrice":[{"beginNum":1,"orgPrice":7501,"price":7501},{"beginNum":2,"orgPrice":7334,"price":7334}]} ][0];
+        //阶梯价
+        proDetail.proSpec = $.extend(
+            {productDetailVO:{},sdiProductsPicList:{},sdiProductsPriceList:{},deliveryAreaFeeList:[],productPropertySkuBoList:{}},[
+            {"id":929116222,"userId":"04888882","shopUrlId":null,"productDetailVO":{"id":929116222,"sellType":"1","title":"精美耳环，限量定制啊余","goodsCode":null,"goodsflag":"1","picture1":"i004/2018/03/20/58/1bf0b586ba46d18cac77d3990b221a15.jpg@500w_500h","picture2":"i004/2018/03/20/58/1bf0b586ba46d18cac77d3990b221a15.jpg@500w_500h","picture3":"i004/2018/03/20/58/1bf0b586ba46d18cac77d3990b221a15.jpg@500w_500h","picture4":"i004/2018/03/20/58/1bf0b586ba46d18cac77d3990b221a15.jpg","introduction":"本店专供","metric":"对","saleNumber":"99999","freight":100,"userId":"04888882","isaduit":"1","updateTime":20180516084413,"priceType":"1","barcode":null,"freedelivery":0,"productMode":"0","sellFlag":"0","freightTemplateId":1,"translateId":null,"detaill":"<span style=\"color:#666666;font-family:Simsun;font-size:14px;line-height:28px;\">复古的波西米亚风长款</span><a class=\"channel_keylink\" href=\"http://www.2liang.net/fushi/erhuan\">耳环</a><span style=\"color:#666666;font-family:Simsun;font-size:14px;line-height:28px;\">，一种古典而清新的感觉，现代</span><a class=\"channel_keylink\" href=\"http://www.2liang.net/fushi/\" target=\"_blank\">时尚</a><span style=\"color:#666666;font-family:Simsun;font-size:14px;line-height:28px;\">中带点紫调气息，流苏垂落下来，由内而外的优雅。\r\n<div class=\"pro_info_detail\" style=\"margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n\t<div class=\"pro_info_text\" style=\"margin:6px 0px 0px;padding:0px;border:0px;font-size:14px;\">\r\n\t\t产品为现代家居创意长臂壁灯，光源为环保的LED灯。适用于室内空间、商厦场所、酒店餐厅以及休闲娱乐场所等等。由灯罩和灯臂和灯头组成。灯罩是为仿古亚黑，灯臂为金古色。灯具制作工艺为喷漆磨砂，材质是为五金。灯头采用国际E27标准灯头，精巧时尚，选择光源更加便捷。该灯有优质加厚烤漆吸盘，表面光滑平整，厚薄均匀，手感舒适且安全又耐用。同时灯臂还可以180度上下调节，可按照空间来调整灯具角度，弯处采用圆滑角边设计，既安全又美观。产品的净重量为3.0KG，毛重3.0KG，体积为25.0cm*25.0cm*25.0cm；包装为硬纸箱加珍珠棉，包装使用高强度瓦楞纸，抗压使产品得到最大保护。产品发源地为广东中山。 &nbsp;公司简介：中山市古镇微盛照明厂，地处经济发达的珠三角洲，位于美丽的中国灯都——中山市古镇，是一家集成品设计研发、生产销售及服务于一体专业“家居照明，商业照明，工程照明”灯饰、灯具经营厂。 本厂拥有一批高素质的营销管理团队及专业的技术设计人才。自成立以来，秉承“诚信经营，合作双赢，共同发展”的经营理念，坚持专注品质 点亮生活的“人文核心”，树立求真务实，与时俱进的企业文化，予写着我国灯饰行业的传奇之路！86 0760&nbsp;13158945828（服务电话）\r\n\t</div>\r\n\t<div>\r\n\t\t<br />\r\n\t</div>\r\n</div>\r\n<div class=\"clr\" style=\"margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n</div>\r\n<div class=\"clr\" style=\"margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n</div>\r\n<div class=\"clr\" style=\"margin:0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n</div>\r\n<div class=\"mt30px\" style=\"margin:30px 0px 0px;padding:0px;border:0px;color:#444444;font-family:tahoma, arial, 宋体, sans-serif;background-color:#FFFFFF;\">\r\n\t<ul class=\"view_pro_liul\" style=\"background:url(&quot;\">\r\n\t</ul>\r\n</div>\r\n</span><br />\r\n<img src=\"http://img1.yiwugou.com/i004/2018/03/19/22/807c20948ddd4b1be6ba6820ca48b219.jpg\" />","marketCode":10,"tags":null,"defineType":"327381,329611","categorystauts":null,"sellPrice":110,"creatTime":20180319194221,"picture":"i004/2018/03/20/58/1bf0b586ba46d18cac77d3990b221a15.jpg","videoId":0,"isRefund":"1","weightetc":"1000,100,9","isVirtual":"1","innertype":0,"startNumber":1200},"sdiProductsPicList":[{"goodsid":929116222,"picture1":"i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg@500w_500h","picture2":"i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg@500w_500h","picture3":"i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg@500w_500h","picture4":"i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg","picture":"i004/2018/03/20/35/cc9b965e96035582b6520444b5bbf1ec.jpg@500w_500h","marketCode":null},{"goodsid":929116222,"picture1":"i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg@500w_500h","picture2":"i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg@500w_500h","picture3":"i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg@500w_500h","picture4":"i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg","picture":"i004/2018/03/20/56/353e62121d683d72b82fc81ec6abf372.jpg@500w_500h","marketCode":null},{"goodsid":929116222,"picture1":"i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg@500w_500h","picture2":"i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg@500w_500h","picture3":"i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg@500w_500h","picture4":"i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg","picture":"i004/2018/03/20/95/b5f7d9543ac601003fd5efc512c7e2cf.jpg@500w_500h","marketCode":null}],"sdiProductsPriceList":[{"productId":929116222,"startNumber":2400,"endNumber":null,"conferPrice":110,"sellPrice":110,"marketCode":null,"sortOrder":2},{"productId":929116222,"startNumber":1200,"endNumber":2399,"conferPrice":120,"sellPrice":120,"marketCode":null,"sortOrder":1}],"deliveryAreaFeeList":[],"productPropertySkuBoList":null,"video":null}
+        ][0]);
+        //规格价
+        /*proDetail.proSpec = $.extend(
+            {productDetailVO:{},sdiProductsPicList:{},sdiProductsPriceList:{},deliveryAreaFeeList:[],productPropertySkuBoList:{}},[
+                {"id":929215794,"userId":"04888882","shopUrlId":null,"productDetailVO":{"id":929215794,"sellType":"1","title":"规格规格规格产品","goodsCode":null,"goodsflag":"1","picture1":"i004/2018/05/11/15/65b50e852cbd8bfce5fe3ca5e012ec44.jpg@500w_500h","picture2":"i004/2018/05/11/15/65b50e852cbd8bfce5fe3ca5e012ec44.jpg@500w_500h","picture3":"i004/2018/05/11/15/65b50e852cbd8bfce5fe3ca5e012ec44.jpg@500w_500h","picture4":"i004/2018/05/11/15/65b50e852cbd8bfce5fe3ca5e012ec44.jpg","introduction":"货源类别:现货货号:s5005产品年龄分类:成人袜品牌:其他面料名称:全棉主面料成分:棉主面料成分的含量:80（%） 是否支持贴牌:不支持是否支持代工:不支持产品类别:隐形袜产地:其他风格:百搭功能:隐形,透气适合季节:夏季图案:纯色是否库存:是库存类型:整单适用性别:女是否进口:否颜色:黑,白,灰色尺码:均码","metric":"双","saleNumber":"29082","freight":0,"userId":"04888882","isaduit":"1","updateTime":20180517095511,"priceType":"3","barcode":null,"freedelivery":0,"productMode":"0","sellFlag":"1","freightTemplateId":1,"translateId":null,"detaill":"<div id=\"offer-template-0\"></div><p><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/974/193/3604391479_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/266/496/3605694662_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/986/196/3605691689_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/127/886/3605688721_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/464/069/3604960464_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/579/283/3604382975_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/812/793/3604397218_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/458/586/3605685854_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/443/493/3604394344_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/148/759/3604957841_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/436/883/3604388634_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/327/583/3604385723_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/606/193/3604391606_1140132730.jpg\" /><br /><br /><img alt=\"undefined\" src=\"https://cbu01.alicdn.com/img/ibank/2016/477/496/3605694774_1140132730.jpg\" /><br /><br /></p>","marketCode":10,"tags":null,"defineType":null,"categorystauts":null,"sellPrice":1000,"creatTime":20180511090657,"picture":"i004/2018/05/11/15/65b50e852cbd8bfce5fe3ca5e012ec44.jpg","videoId":0,"isRefund":"0","weightetc":",,","isVirtual":"1","innertype":0,"startNumber":3},"sdiProductsPicList":[{"goodsid":929215794,"picture1":"i004/2018/05/11/66/8543a45f0775623c9a4b85a859f3ef18.jpg@500w_500h","picture2":"i004/2018/05/11/66/8543a45f0775623c9a4b85a859f3ef18.jpg@500w_500h","picture3":"i004/2018/05/11/66/8543a45f0775623c9a4b85a859f3ef18.jpg@500w_500h","picture4":"i004/2018/05/11/66/8543a45f0775623c9a4b85a859f3ef18.jpg","picture":"i004/2018/05/11/66/8543a45f0775623c9a4b85a859f3ef18.jpg@500w_500h","marketCode":null},{"goodsid":929215794,"picture1":"i004/2018/05/11/48/41c4e504dc43525bdd2ba874fbeb82ee.jpg@500w_500h","picture2":"i004/2018/05/11/48/41c4e504dc43525bdd2ba874fbeb82ee.jpg@500w_500h","picture3":"i004/2018/05/11/48/41c4e504dc43525bdd2ba874fbeb82ee.jpg@500w_500h","picture4":"i004/2018/05/11/48/41c4e504dc43525bdd2ba874fbeb82ee.jpg","picture":"i004/2018/05/11/48/41c4e504dc43525bdd2ba874fbeb82ee.jpg@500w_500h","marketCode":null},{"goodsid":929215794,"picture1":"i004/2018/05/11/67/65585a8436ae87e22cb914ea6ac03d36.jpg@500w_500h","picture2":"i004/2018/05/11/67/65585a8436ae87e22cb914ea6ac03d36.jpg@500w_500h","picture3":"i004/2018/05/11/67/65585a8436ae87e22cb914ea6ac03d36.jpg@500w_500h","picture4":"i004/2018/05/11/67/65585a8436ae87e22cb914ea6ac03d36.jpg","picture":"i004/2018/05/11/67/65585a8436ae87e22cb914ea6ac03d36.jpg@500w_500h","marketCode":null}],"sdiProductsPriceList":[],"deliveryAreaFeeList":[],"productPropertySkuBoList":[{"id":752652,"productId":929215794,"price":1000,"stock":9684,"propertyNames":"规格","propertyValues":"333333333"},{"id":752648,"productId":929215794,"price":2222,"stock":9699,"propertyNames":"规格","propertyValues":"1111111"},{"id":752650,"productId":929215794,"price":3333,"stock":9699,"propertyNames":"规格","propertyValues":"222222"}],"video":null}
+            ][0])*/
+        proDetail.propertyList = [
+            [{"id":7044499,"productId":929116222,"pvalue":"尺寸","cvalue":"大:中:小:","marketCode":null,"sortOrder":"0"},{"id":7044500,"productId":929116222,"pvalue":"颜色","cvalue":"红:黄:蓝:","marketCode":null,"sortOrder":"1"},{"id":7044501,"productId":929116222,"pvalue":"测试","cvalue":"测试1:测试2:","marketCode":null,"sortOrder":"2"}]
+        ][0] || [];
+
+        //设置价格
+        proDetail.appendPrice();
+
+        //按购买数量报价
+        if(proDetail.proSpec.productDetailVO.priceType === "1"){
+            if(proDetail.propertyList.length)
+                $.each(proDetail.propertyList,function(index){
+                    if(proDetail.propertyList.length === index+1){
+                        proDetail.appendCounter({
+                            name:this.pvalue,
+                            values:this.cvalue.split(":")
+                        })
+                    }else
+                        proDetail.appendSpec({
+                            name:this.pvalue,
+                            values:this.cvalue.split(":")
+                        })
+                })
+            else
+                proDetail.appendCounter({
+                    name:"数量"
+                })
+            //按购规格报价
+        }else if(proDetail.proSpec.productDetailVO.priceType === "3"){
+            proDetail.appendCounter({
+                name:"规格",
+                values:$.map(proDetail.proSpec.productPropertySkuBoList,function(obj){
+                    return obj.propertyValues;
+                }),
+                prices:$.map(proDetail.proSpec.productPropertySkuBoList,function(obj){
+                    return obj.price;
+                }),
+                stocks:$.map(proDetail.proSpec.productPropertySkuBoList,function(obj){
+                    return obj.stock;
+                })
+            })
+        }
+
+
+
+        proDetail.proSpec.minBatch = parseInt(proDetail.proSpec.productDetailVO.startNumber)||1;
+
+
+
+        $("#pics").find("li").hover(function(){
+            $("#lagerPic").attr("src",$(this).active().find("img").attr("data-source"));
+        });
+
+        $("#areaList").click(function(e) {
+            Utils.stopBubble(e, "event");
+
+        })
+        $(document).click(function() {
+            $("#areaList").addClass("hide");
+        })
+    })
+</script>
