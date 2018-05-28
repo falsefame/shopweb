@@ -2,7 +2,7 @@ define(function(require, exports, module){
    
     var PopUpBox = require("popUpBox"),
         utils = require("utils"),
-		lang = require("lang"),
+		lang = require("cnlang"),
         $ = window.jQuery || require("jQuery");
         
     window.Alert = function(text,title,callback){

@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="style/base.css" rel="stylesheet" type="text/css"/>
+    <link href="style/1/project.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <!-- 公用top -->
+    <div class="web_top">
+        <div class="container">
+            <div class="right">
+                <div class="web_top_kf" >
+                    联系客服
+                    <div class="web_top_kf_a">
+                        联系客服
+                    </div>
+                    <div class="web_top_kf_b">
+                        <p title="云仓客服1"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2853876369&amp;site=qq&amp;menu=yes" target="_blank" class="ml3 c36c">联系客服1</a></p>
+                        <p title="云仓客服2"><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=2853876372&amp;site=qq&amp;menu=yes" target="_blank" class="ml3 c36c">联系客服2</a></p>
+                        <p class="email">linhao@yiwugou.com</p>
+                        <p class="tel">0579-81530000</p>
+                    </div>
+                </div>
+                <span class="cddd">|</span> <a href="${ctx}/cart.html" class="cart" target="_self">购物车</a>
+
+                <span class="cddd">|</span> <a href="javascript:void(0)" onclick="location.href='${work}/logout.html?redirect='+location.href" target="_self">退出</a>
+
+            </div>
+            <a href="#" target="_self"> <span>您好，某某某</span></a>
+            <!--<span>您好，请<a href="javascript:void(0)" onclick="location.href='${work}/login.html?redirect='+location.href" class="c333 mg05" target="_self">登录</a></span>
+            <a href="javascript:void(0)" onclick="location.href='${work}/join.html?redirect='+location.href"  class="cred" target="_self">免费注册</a>-->
+        </div>
+    </div>
+    <!-- 公用top -->
+
+
+
+    <div class="container tc">
+        <div class="inblock mt100">
+            <form class="formValid" action="#" method="post" onsubmit="return false" >
+                <table class="table_form register_form">
+                    <tbody><tr>
+                        <th>登录帐号</th>
+                        <td>
+                            <input type="text" name="username" class="input-text w250" placeholder="手机号码或义乌购商铺帐号">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>密码</th>
+                        <td>
+                            <input type="password" name="password" class="input-text w250">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td class="lh13px">
+                            <div class="w250"><a href="http://yw.work.hezon.cn/common/password/forget.html" class="c36c right">忘记密码？</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td><input type="button" class="submitValid bt bt-l w250" value="立即登录"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="mt100"></div>
+    </div>
+
+    <!-- 此处公用 footer-->
+    <div class="footer mt30">
+        <div class="container">
+            <div class="right mt60">
+                <div class="right f30 lh40 cfff ml20">
+                    0579-85898888
+                </div>
+                <div class="lh20 left ">
+                    <p>全国客户服务热线</p>
+                    <p>Customer Hotline</p>
+                </div>
+            </div>
+            <div class="lh40">
+                <p>
+                    <a href="#">网站首页</a>
+                    <span class="ml5 mr5">|</span>
+                    <a href="#">关于我们</a>
+                    <span class="ml5 mr5">|</span>
+                    <a href="#">产品展示</a>
+                    <span class="ml5 mr5">|</span>
+                    <a href="#">新闻资讯</a>
+                    <span class="ml5 mr5">|</span>
+                    <a href="#">联系我们</a>
+                </p>
+                <p>联系邮箱：xxxxx@xx.com</p>
+                <p>联系地址：几区市场几号门几街几0几</p>
+                <p>© 2018 Yiwugou.com 版权所有 增值电信业务经营许可证:浙B2-20110340</p>
+            </div>
+        </div>
+    </div>
+    <!-- 此处公用 footer-->
+</body>
+<!-- 此处公用 start-->
+<script src="http://yiwugouimg.oss-cn-hangzhou.aliyuncs.com/cloud/js/seatest/sea.js"></script>
+<script src="js/workpath.js"></script>
+<script>
+    seajs.setProjectConfig("http://img1.yiwugou.com/cloud/js/seatest",location.protocol+"//"+location.host+"/shopweb.git");
+</script>
+<!-- 此处公用 end-->
+<script>
+    seajs.use(["formValid","common"],function(FormValid){
+        new FormValid().validate({
+            oldRules:"false",
+            validate:{
+                rules:{
+                    username:{require:"手机号码或义乌购商铺帐号"
+                    },
+                    password:{require:"密码",rangelength : [ 6, 20 ]}
+                },
+                messages:{
+                    password:{rangelength : jQuery.validator.format("密码长度在 {0} 到 {1} 之间")}
+                }
+            }
+        })
+
+        $(document).keydown(function(e){
+            if(e.keyCode == 13){
+                $(".submitValid").click();
+            }
+        })
+    })
+</script>
+</html>

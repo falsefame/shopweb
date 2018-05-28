@@ -1,7 +1,7 @@
 define(function(require, exports, module) {
     var $ = require("jqueryPlus")
         ,utils = require("utils")
-        ,lang = require("lang");
+        ,lang = require("cnlang");
     var factory = {
         "propertyList":[],
         "prepurchase":{
@@ -199,6 +199,7 @@ define(function(require, exports, module) {
                 factory.prepurchase.pnum = pnum;
                 if(factory.prepurchase.spec1.length)
                     factory.updateBill();
+                if(!input)return;
             }else{
                 factory.prepurchase.pnum += parseInt(input.value) - parseInt($(input).attr("data-tempValue"));
             }
@@ -353,7 +354,7 @@ define(function(require, exports, module) {
 
             Ajax({
                 url : "json/addCart",
-                data : data,
+                data : $.param(data),
                 success : function() {
                     Tip(lang.proDetail.addSuccess);
                 }

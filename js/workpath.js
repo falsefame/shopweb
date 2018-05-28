@@ -4,7 +4,7 @@ seajs.setProjectConfig = function(base,workpath){
         alias: {
             "common":workpath+"/js/common",
             "proDetail": workpath+"/js/proDetail",
-            "lang":workpath+"/js/lang/zh"
+            "cnlang":workpath+"/js/lang/zh"
         }
     });
 }

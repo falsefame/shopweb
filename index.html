@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="style/base.css" rel="stylesheet" type="text/css"/>
+    <link href="style/1/project.css" rel="stylesheet" type="text/css"/>
+    <link href="style/1/index.css" rel="stylesheet" type="text/css"/>
 </head>
-<link href="style/base.css" rel="stylesheet" type="text/css"/>
-<link href="style/1/project.css" rel="stylesheet" type="text/css"/>
 <body>
     <!-- 公用top -->
     <div class="web_top">
@@ -54,18 +55,54 @@
     <div class="head_nav">
         <div class="container">
             <ul>
-                <li><a href="#">首页<i></i></a></li>
+                <li><a href="#" class="index active" onmouseenter="document.getElementById('indexActive').className=''">首页<i></i></a></li>
                 <li><a href="#">关于我们</a></li>
-                <li><a href="#" class="active">产品中心</a></li>
+                <li><a href="#">产品中心</a></li>
                 <li><a href="#">新闻资讯</a></li>
             </ul>
         </div>
     </div>
     <!-- 公用head -->
-    <div class="container mt20">
-        <div class="product-cfy">
-            <a href="javascript:;" class="active">厨房用品</a>
-            <a href="#" >洗漱</a>
+
+    <div class="container ">
+        <div class="banner">
+            <ul class="banimg">
+                <li>
+                    <a href="/discount-topic/goods?sid=5212&amp;path=wxjson%2Fgetblock.json&amp;id=41" target="_blank">
+                        <img src="http://img1.yiwugou.com/i004/2018/04/04/38/4c020982a46eaec7dc6d150e887e044c.jpg@590w_590h.jpg" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC'">
+                    </a>
+                </li>
+                <li>
+                    <a href="/discount-topic/goods?sid=5212&amp;path=wxjson%2Fgetblock.json&amp;id=38" target="_blank">
+                        <img src="http://img1.yiwugou.com/i004/2018/03/27/49/eda91ab250c8cfad1aa1eb34ce40dfde.jpg@590w_590h.jpg" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC'">
+                    </a>
+                </li>
+                <li>
+                    <a href="/discount-topic/goods?sid=5212&amp;path=wxjson%2Fgetblock.json&amp;id=39&amp;keyword=面膜" target="_blank">
+                        <img src="http://img1.yiwugou.com/i004/2018/04/04/08/ef3cc58555f855b0a01f9c6d1f1e2105.jpg@590w_590h.jpg" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC'">
+                    </a>
+                </li>
+                <li>
+                    <a href="/discount-topic/goods?sid=5212&amp;path=wxjson%2Fgetblock.json&amp;id=42" target="_blank">
+                        <img src="http://img1.yiwugou.com/i004/2018/05/18/13/de5f05c46c23cf2cbbabee2afcb0cf67.jpg@590w_590h.jpg" onerror="this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC'">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="index_title mt60">
+            <span class="f18 fb">关于我们</span>
+        </div>
+        <div class="mt20">
+            <div class="left mr20">
+                <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527234498892&di=1efa55649f847a1f74e9f06093ec6a77&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01232c554364740000019ae9048e2e.jpg%401280w_1l_2o_100sh.png" height="150"/>
+            </div>
+            <div class="ofhide c333">
+                <h3 class="mt15">我们公司就是这么牛逼</h3>
+                <p class="lh30 mt15 f14">我们公司就是这么牛逼我们公司就是这么牛逼我们公司就是这么牛逼我们公司就是这么牛逼我们公司就是这么牛逼我们公司就是这么牛逼</p>
+            </div>
+        </div>
+        <div class="index_title mt60">
+            <span class="f18 fb">产品展示</span>
         </div>
         <div class="ofhide">
             <ul class="product-list">
@@ -80,10 +117,17 @@
                     <div class="product-title">
                         <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
                     </div>
-                    <div class="product-price">
-                        <span class="right">1个起批</span>
-                        <span class="cred f16px">￥130.00</span>
-                        <span class="c999">/个</span>
+                </li>
+                <li>
+                    <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" class="block" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">
+                        <div class="tableCell">
+                            <div class="lowIEMiddle">
+                                <img data-lazyload="http://img1.yiwugou.com/i004/2017/09/05/15/c6b36919571353028b066601a5700b54.jpg@224w_224h.jpg" src="http://img1.yiwugou.com/i004/2017/09/05/15/c6b36919571353028b066601a5700b54.jpg@224w_224h.jpg" style="display: inline;">
+                            </div>
+                        </div>
+                    </a>
+                    <div class="product-title">
+                        <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
                     </div>
                 </li>
                 <li>
@@ -97,11 +141,6 @@
                     <div class="product-title">
                         <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
                     </div>
-                    <div class="product-price">
-                        <span class="right">1个起批</span>
-                        <span class="cred f16px">￥130.00</span>
-                        <span class="c999">/个</span>
-                    </div>
                 </li>
                 <li>
                     <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" class="block" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">
@@ -113,67 +152,36 @@
                     </a>
                     <div class="product-title">
                         <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
-                    </div>
-                    <div class="product-price">
-                        <span class="right">1个起批</span>
-                        <span class="cred f16px">￥130.00</span>
-                        <span class="c999">/个</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" class="block" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">
-                        <div class="tableCell">
-                            <div class="lowIEMiddle">
-                                <img data-lazyload="http://img1.yiwugou.com/i004/2017/09/05/15/c6b36919571353028b066601a5700b54.jpg@224w_224h.jpg" src="http://img1.yiwugou.com/i004/2017/09/05/15/c6b36919571353028b066601a5700b54.jpg@224w_224h.jpg" style="display: inline;">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-title">
-                        <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
-                    </div>
-                    <div class="product-price">
-                        <span class="right">1个起批</span>
-                        <span class="cred f16px">￥130.00</span>
-                        <span class="c999">/个</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" class="block" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">
-                        <div class="tableCell">
-                            <div class="lowIEMiddle">
-                                <img data-lazyload="http://img1.yiwugou.com/i004/2017/09/05/15/c6b36919571353028b066601a5700b54.jpg@224w_224h.jpg" />
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-title">
-                        <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
-                    </div>
-                    <div class="product-price">
-                        <span class="right">1个起批</span>
-                        <span class="cred f16px">￥130.00</span>
-                        <span class="c999">/个</span>
-                    </div>
-                </li>
-                <li>
-                    <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" class="block" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">
-                        <div class="tableCell">
-                            <div class="lowIEMiddle">
-                                <img data-lazyload="http://img1.yiwugou.com/i004/2017/09/05/15/c6b36919571353028b066601a5700b54.jpg@224w_224h.jpg" />
-                            </div>
-                        </div>
-                    </a>
-                    <div class="product-title">
-                        <a href="http://yw.hezon.cn/product/detail/17916.html" target="_blank" title="Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶">Opus不锈钢男女学生家用咖啡保温壶大容量保温瓶桶</a>
-                    </div>
-                    <div class="product-price">
-                        <span class="right">1个起批</span>
-                        <span class="cred f16px">￥130.00</span>
-                        <span class="c999">/个</span>
                     </div>
                 </li>
             </ul>
         </div>
+        <div class="mt20">
+            <div class="left w300 mr20">
+                <div class="index_title mt60">
+                    <span class="f18 fb">新闻资讯</span>
+                </div>
+                <ul class="index_news mt10">
+                    <li><a href="#" target="_blank">这是一条有价值的新闻</a></li>
+                    <li><a href="#" target="_blank">这是一条很长很长很长很长很长很长很长很长很长很长很长</a></li>
+                    <li><a href="#" target="_blank">这是也是一条有价值的新闻</a></li>
+                    <li><a href="#" target="_blank">这是也是一条有价值的新闻</a></li>
+                    <li><a href="#" target="_blank">这是也是一条有价值的新闻</a></li>
+                    <li><a href="#" target="_blank">这是也是一条有价值的新闻</a></li>
+                    <li><a href="#" target="_blank">这是也是一条有价值的新闻</a></li>
+                </ul>
+            </div>
+            <div class="ofhide">
+                <div class="index_title mt60">
+                    <span class="f18 fb">产品资讯</span>
+                </div>
+                <div class="mt10">
+                    <img src="http://img1.yiwugou.com/i004/2018/03/27/49/eda91ab250c8cfad1aa1eb34ce40dfde.jpg@590w_590h.jpg" width="680" height="280"/>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- 此处公用 footer-->
     <div class="footer mt30">
         <div class="container">
@@ -214,10 +222,20 @@
 </script>
 <!-- 此处公用 end-->
 <script>
-    seajs.use(["common","lazyload"],function(){
-        $("img[data-lazyload]").lazyload({
-            placeholder:"http://img1.yiwugou.com/cloud/images/noimg2.png"
-        })
+    seajs.use(["jqueryPlus","common"],function($){
+        $(".banimg").roller(
+            {
+                console : [ {
+                    type : "location",
+                    $wrapper : $("<div/>").addClass(
+                        "bannav").append($("<ul/>")),
+                    $child : $("<li/>"),
+                    trigger : "click",
+                    active : "active"
+                } ],
+                interval : 3500
+            }
+        );
     })
 </script>
 </html>
